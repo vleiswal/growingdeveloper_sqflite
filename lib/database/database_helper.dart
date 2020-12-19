@@ -32,7 +32,7 @@ class DatabaseHelper {
   }
 
   Future _onCreate(Database db, int version) {
-    db.query(''' 
+    db.execute(''' 
     CREATE TABLE $_tableName(
     $columnId INTEGER PRIMARY KEY,
     $columnName TEXT NOT NULL)
